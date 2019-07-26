@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.mybatis.mapper.BlogMapper">
+	
+	<resultMap type="Blog" id="blogResultMap">
+		<id column="id" property="id" jdbcType="INTEGER"></id>
+		<association property="author" column="author_id" javaType="Author"
+		select="com.qfedu.mybatis.mapper.AuthorMapper.selectAuthorById"></association>
+	</resultMap>
+	
+	<select id="selectBlogById" parameterType="int" resultMap="blogResultMap">
+		select * from blog where id = #{id}
+	</select>
+	
+	<select id="selectBlogList" resultMap="blogResultMap">
+		select * from blog
+	</select>
+	
+	<resultMap type="Blog" id="blogResultMapNested">
+        <id column="blog_id" property="id"></id>
+        <result column="blog_title" property="title"/>
+        <result column="blog_state" property="state"/>
+        <result column="blog_featured" property="featured"/>
+        <result column="blog_style" property="style"/>
+        <association column="blog_author_id" property="author" javaType="Author">
+            <id column="author_id" property="id"></id>
+            <result column="author_username" property="username"/>
+            <result column="author_password" property="password"/>
+            <result column="author_email" property="email"/>
+            <result column="author_bio" property="bio"/>
+            <result column="author_favourite_section" property="favouriteSection"/>
+            <result column="author_nickname" property="nickname"/>
+            <result column="author_realname" property="realname"/>
+        </association>
+    </resultMap>
+	
+	
+	<resultMap type="Blog" id="blogResultMap2">
+		<id column="blog_id" property="id"></id>
+		<result column="blog_title" property="title"/>
+		<result column="blog_state" property="state"/>
+		<result column="blog_featured" property="featured"/>
+		<result column="blog_style" property="style"/>
+	</resultMap>
+	<resultMap type="Blog" id="blogResultMapNested2" extends="blogResultMap2">
+		<association column="blog_author_id" property="author" javaType="Author">
+			<id column="author_id" property="id"></id>
+			<result column="author_username" property="username"/>
+			<result column="author_password" property="password"/>
+			<result column="author_email" property="email"/>
+			<result column="author_bio" property="bio"/>
+			<result column="author_favourite_section" property="favouriteSection"/>
+			<result column="author_nickname" property="nickname"/>
+			<result column="author_realname" property="realname"/>
+		</association>
+	</resultMap>
+	
+	<select id="selectBlogListNested" resultMap="blogResultMapNested2">
+	SELECT 
+	  b.id AS blog_id,
+	  b.title AS blog_title,
+	  b.author_id AS blog_author_id,
+	  b.state AS blog_state,
+	  b.featured AS blog_featured,
+	  b.style AS blog_style,
+	  
+	  a.id AS author_id,
+	  a.username AS author_username,
+	  a.password AS author_password,
+	  a.email AS author_email,
+	  a.bio AS author_bio,
+	  a.favourite_section AS author_favourite_section,
+	  a.nickname AS author_nickname,
+	  a.realname AS author_realname
+	
+	FROM blog b
+	LEFT JOIN author a
+	ON b.author_id = a.id
+	</select>	
+	
+	
+	<!-- 构造方法映射 -->
+	<resultMap type="Blog" id="blogResultMapConstructor">
+		<constructor>
+			<idArg column="id" javaType="int"/>
+			<arg column="title" javaType="string"/>
+		</constructor>
+	</resultMap>
+	
+	<select id="selectBlogByIdConstructor" parameterType="int" resultMap="blogResultMapConstructor">
+		select * from blog where id = #{id}
+	</select>
+</mapper>
+
+

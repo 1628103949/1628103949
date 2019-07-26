@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+</head>
+<body>
+index.html
+<br>
+<button id="btn">按钮</button>
+<button id="btn1">按钮1</button>
+<div id="show"></div>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$.post(
+			"http://localhost:8092/api/get",
+			{
+				name:"张三"
+			},
+			function(map){
+				$("#show").html(map.s.name);
+			}
+			
+		);
+	});
+	
+	$("#btn1").click(function(){
+		$.post(
+			"http://localhost:8092/student/show",
+			{
+				
+			},
+			function(map){
+				$("#show").html(map);
+			}
+			
+		);
+	});
+</script>
+</body>
+</html>

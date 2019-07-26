@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/blank" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/mailreader" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/portlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/rest-showcase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/showcase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assembly" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/cdi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/codebehind" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/config-browser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/convention" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/dojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/dwr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/embeddedjsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/gxp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/jasperreports" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/java8-support" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/javatemplates" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/jfreechart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/jsf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/junit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/osgi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/oval" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/pell-multipart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/plexus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/portlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/portlet-tiles" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/sitegraph" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/sitemesh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/struts1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/testng" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/tiles" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/tiles3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwork-core" charset="UTF-8" />
+  </component>
+</project>

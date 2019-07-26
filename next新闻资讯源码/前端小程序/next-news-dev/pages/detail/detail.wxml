@@ -1,0 +1,20 @@
+<view class="title">
+  <!-- 这是一个很长的大标题~~！！这是一个很长的大标题~ -->
+  {{newsDetail.title}}
+</view>
+
+<view class='publisher-info'> 
+  <image class='face' src='{{newsDetail.publisherFace}}'></image>
+
+  <view class='words'>
+    <view class='nickname'>{{newsDetail.publisher}}</view>
+    <view class='normal-info'>
+      <view class='original'>原创</view>
+      <view class='create-time'>
+        发布于 {{newsDetail.createTime}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<rich-text class='news-desc' nodes="{{newsDetail.content}}"></rich-text>

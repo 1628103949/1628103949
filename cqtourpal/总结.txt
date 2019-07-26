@@ -1,0 +1,50 @@
+SSM搭建步骤：
+1.配置pom.xml
+2.配置web.xml:
+<!-- 配置springmvc -->
+  	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- 解决工程编码过滤器 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+3.创建springmvc-servlet.xml配置文件:
+	<!-- 注解扫描器 -->
+	<context:component-scan base-package="com.liu"/>
+	
+	<!-- 配置试图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+4.创建spring beans.xml spring的核心配置	
+	a.配置数据源
+	b.创建SqlSessionFactory
+	c.配置事务
+	d.配置事务的传播特性
+	e.配置AOP
+	
+mybatis插件安装：
+http://jingyan.baidu.com/album/9faa7231506ed8473c28cbee.html?picindex=7	
+5.映射接口
+<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.liu.mapper"></property>
+	</bean>
+6.		
+

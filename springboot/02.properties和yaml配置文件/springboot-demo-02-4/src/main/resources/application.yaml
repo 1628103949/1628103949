@@ -1,0 +1,19 @@
+zy: 
+  secret: ${random.value}
+  number: ${random.int}
+  name: teacher_zhu
+  address: http://www.${zy.name}.com
+  
+server: 
+  port: 8070
+  
+spring: 
+  profiles:
+    active: dev
+    
+#多配置
+---
+spring: 
+  profiles: dev
+server: 
+  port: 8090

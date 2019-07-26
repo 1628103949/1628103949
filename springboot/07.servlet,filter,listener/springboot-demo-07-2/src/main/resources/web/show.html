@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script> -->
+<script type="text/javascript" src="/webjars/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<h3>web:template.html</h3>
+<h3>show:${str}</h3>
+<h3>学生</h3>
+<#if stu??>
+<#if stu.id==1001>
+编号：${stu.id}<br>
+姓名：${stu.name}<br>
+<#else>
+else
+</#if>
+</#if>
+<h3>遍历学生</h3>
+<#list students as s>
+编号：${s.id}<br>
+姓名：${s.name}<br>
+<hr>
+</#list>
+<button id="btn">点击</button>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		alert("click");
+	});
+</script>
+</body>
+</html>
