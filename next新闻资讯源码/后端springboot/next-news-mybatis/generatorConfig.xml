@@ -15,7 +15,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/next-news"
                         userId="root"
-                        password="root">
+                        password="">
         </jdbcConnection>
 
         <!-- 对于生成的pojo所在包 -->

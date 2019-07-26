@@ -5,10 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.next.mapper.NewsMapper;
-import com.next.mapper.TypeMapper;
-import com.next.pojo.News;
-import com.next.pojo.Type;
 import com.next.service.AllInOneService;
 
 import tk.mybatis.mapper.entity.Example;

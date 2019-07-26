@@ -2,9 +2,6 @@ package com.next.service;
 
 import java.util.List;
 
-import com.next.pojo.News;
-import com.next.pojo.Type;
-
 public interface AllInOneService {
 
 	/**
